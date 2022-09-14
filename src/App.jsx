@@ -1,5 +1,15 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { IssueDetail, IssueList } from './pages';
+
 function App() {
-  return <div className="App">github issues</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<IssueList />} />
+        <Route path="/issueList/:id" element={<IssueDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
